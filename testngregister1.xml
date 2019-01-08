@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="loginscriptviaregister.clientunverified"/>
+      <class name="loginscriptviaregister.userban"/>
+      <class name="loginscriptviaregister.agentunverified"/>
+      <class name="loginscriptviaregister.adminverfyemail2"/>
+      <class name="loginscriptviaregister.adminemail"/>
+      <class name="loginscriptviaregister.agentverified"/>
+      <class name="loginscriptviaregister.agentviaemail"/>
+      <class name="loginscriptviaregister.agentdeactivate"/>
+      <class name="loginscriptviaregister.adminverified"/>
+      <class name="loginscriptviaregister.admindeactivate"/>
+      <class name="loginscriptviaregister.adminban"/>
+      <class name="loginscriptviaregister.clientverifiedemail1"/>
+      <class name="loginscriptviaregister.userdeactivated"/>
+      <class name="loginscriptviaregister.agentban"/>
+      <class name="loginscriptviaregister.clientverified"/>
+      <class name="loginscriptviaregister.adminunverified"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

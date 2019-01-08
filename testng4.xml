@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="loginscript.authadminverifiedemail"/>
+      <class name="loginscript.authagentverified"/>
+      <class name="loginscript.authclientemail"/>
+      <class name="loginscript.userdeactivated"/>
+      <class name="loginscript.userverified"/>
+      <class name="loginscript.authclientemailnum"/>
+      <class name="loginscript.authadminverified"/>
+      <class name="loginscript.authadminunverified"/>
+      <class name="loginscript.authagentban"/>
+      <class name="loginscript.authuserbandeactivate"/>
+      <class name="loginscript.Loginscriptadminunverified"/>
+      <class name="loginscript.authuserdeactivate"/>
+      <class name="loginscript.authadminverifiedemail3"/>
+      <class name="loginscript.userunverified"/>
+      <class name="loginscript.authagentemail2"/>
+      <class name="loginscript.userban"/>
+      <class name="loginscript.authclientemailunverified"/>
+      <class name="loginscript.authclient"/>
+      <class name="loginscript.LoginScript1"/>
+      <class name="loginscript.AgentVerified"/>
+      <class name="loginscript.authadminban"/>
+      <class name="loginscript.userverified3"/>
+      <class name="loginscript.Adminban"/>
+      <class name="loginscript.AgentUnverified"/>
+      <class name="loginscript.Loginscriptadminverified3"/>
+      <class name="loginscript.AdminDecactivate"/>
+      <class name="loginscript.Loginscriptadminverified2"/>
+      <class name="loginscript.AgentVerified4"/>
+      <class name="loginscript.AgentVerified3"/>
+      <class name="loginscript.Loginscriptadminverified1"/>
+      <class name="loginscript.AgentBan"/>
+      <class name="loginscript.AgentVerified2"/>
+      <class name="loginscript.userverified2"/>
+      <class name="loginscript.AgentDeactivate"/>
+      <class name="loginscript.AgentVerified1"/>
+      <class name="loginscript.userverified1"/>
+      <class name="loginscript.authadmindeactivated"/>
+      <class name="loginscript.authagentemail"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="loginscript.authadminverifiedemail"/>
+      <class name="loginscript.authagentverified"/>
+      <class name="loginscript.authclientemail"/>
+      <class name="loginscript.authclientemailnum"/>
+      <class name="loginscript.authadminverified"/>
+      <class name="loginscript.authadminunverified"/>
+      <class name="loginscript.authagentban"/>
+      <class name="loginscript.authuserbandeactivate"/>
+      <class name="loginscript.authuserdeactivate"/>
+      <class name="loginscript.authadminverifiedemail3"/>
+      <class name="loginscript.authagentemail2"/>
+      <class name="loginscript.authclientemailunverified"/>
+      <class name="loginscript.authclient"/>
+      <class name="loginscript.authadminban"/>
+      <class name="loginscript.authadmindeactivated"/>
+      <class name="loginscript.authagentemail"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
