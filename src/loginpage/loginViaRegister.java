@@ -33,7 +33,8 @@ public class loginViaRegister extends Basepage1
 	   private WebElement userunverified;
 	 @FindBy(xpath="//div[@class='alert alert-danger']")
 	   private WebElement BAN;
-	public loginViaRegister(WebDriver driver) {
+	public loginViaRegister(WebDriver driver) 
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}

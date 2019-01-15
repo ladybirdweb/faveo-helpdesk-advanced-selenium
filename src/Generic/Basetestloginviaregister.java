@@ -24,7 +24,7 @@ public class Basetestloginviaregister implements Autoconstant
 			driver=new ChromeDriver();
 			else
 				driver=new FirefoxDriver();
-			driver.get("http://lbws.ml/master48/public/auth/login");
+			driver.get("http://localhost/faveo-helpdesk-advance/public/auth/login");
 	}
 	@AfterMethod(alwaysRun=true)
 	public void aftermethod(ITestResult res) throws InterruptedException

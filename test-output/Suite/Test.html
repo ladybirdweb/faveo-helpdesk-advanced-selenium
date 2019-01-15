@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>15/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 07 22:36:11 IST 2019</td>
+<td>Started on:</td><td>Sat Jan 12 11:12:07 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>1268 seconds (1268352 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46748 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,54 +75,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='loginscriptviaregister.adminunverified.aftermethod()'><b>aftermethod</b><br>Test class: loginscriptviaregister.adminunverified<br>Parameters: [TestResult name=test status=FAILURE method=adminunverified.test()[pri:0, instance:loginscriptviaregister.adminunverified@27808f31] output=The admin is unverified]</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=71.0.3578.98)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+<td title='scriptemailsettings.systemslogs.aftermethod()'><b>aftermethod</b><br>Test class: scriptemailsettings.systemslogs<br>Parameters: [TestResult name=test status=SUCCESS method=systemslogs.test()[pri:0, instance:scriptemailsettings.systemslogs@bd8db5a] output= system logs element is displayed]</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
-System info: host: &apos;LAPTOP-PHDB1SI7&apos;, ip: &apos;192.168.1.13&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\pc\AppData\Local\T...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63110}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
-Session ID: 0884d55f5e50166ed09204c43b3f0e3e
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;LAPTOP-PHDB1SI7&apos;, ip: &apos;192.168.2.75&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
-	at Generic.Screenshot.getphoto(Screenshot.java:16)
-	at Generic.Basetestloginviaregister.aftermethod(Basetestloginviaregister.java:35)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1054035701", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1054035701'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=71.0.3578.98)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:438)
+	at Generic.Basetest.aftermethod(Basetest.java:39)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1967496309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1967496309'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
-System info: host: &apos;LAPTOP-PHDB1SI7&apos;, ip: &apos;192.168.1.13&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\pc\AppData\Local\T...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63110}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
-Session ID: 0884d55f5e50166ed09204c43b3f0e3e
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+System info: host: &apos;LAPTOP-PHDB1SI7&apos;, ip: &apos;192.168.2.75&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
-	at Generic.Screenshot.getphoto(Screenshot.java:16)
-	at Generic.Basetestloginviaregister.aftermethod(Basetestloginviaregister.java:35)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:438)
+	at Generic.Basetest.aftermethod(Basetest.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -152,64 +126,8 @@ Session ID: 0884d55f5e50166ed09204c43b3f0e3e
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>6</td>
-<td>loginscriptviaregister.adminunverified@27808f31</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='loginscriptviaregister.adminunverified.test()'><b>test</b><br>Test class: loginscriptviaregister.adminunverified<br/>
-<a href="#Output-987834065" onClick='toggleBox("Output-987834065", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-987834065" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-987834065">
-The admin is unverified<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.fail(Assert.java:95)
-	at Generic.Basepage1.elementvisiblity(Basepage1.java:35)
-	at loginscriptviaregister.adminunverified.test(adminunverified.java:23)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace987834065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace987834065'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.fail(Assert.java:95)
-	at Generic.Basepage1.elementvisiblity(Basepage1.java:35)
-	at loginscriptviaregister.adminunverified.test(adminunverified.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>116</td>
-<td>loginscriptviaregister.adminunverified@27808f31</td></tr>
+<td>0</td>
+<td>scriptemailsettings.systemslogs@bd8db5a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -219,178 +137,17 @@ The admin is unverified<br/>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='loginscriptviaregister.clientunverified.test()'><b>test</b><br>Test class: loginscriptviaregister.clientunverified<br/>
-<a href="#Output-26928827" onClick='toggleBox("Output-26928827", this, "Show output", "Hide output");'>Show output</a>
+<td title='scriptemailsettings.systemslogs.test()'><b>test</b><br>Test class: scriptemailsettings.systemslogs<br/>
+<a href="#Output-2082509879" onClick='toggleBox("Output-2082509879", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-26928827" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-26928827">
-the user is unverified<br/>
-</div>
-</td>
-<td></td>
-<td>49</td>
-<td>loginscriptviaregister.clientunverified@307f6b8c</td></tr>
-<tr>
-<td title='loginscriptviaregister.userban.test()'><b>test</b><br>Test class: loginscriptviaregister.userban<br/>
-<a href="#Output-2123914473" onClick='toggleBox("Output-2123914473", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2123914473" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2123914473">
-the user is ban or deactivated<br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>loginscriptviaregister.userban@7a187f14</td></tr>
-<tr>
-<td title='loginscriptviaregister.agentunverified.test()'><b>test</b><br>Test class: loginscriptviaregister.agentunverified</td>
-<td></td>
-<td>20</td>
-<td>loginscriptviaregister.agentunverified@6f195bc3</td></tr>
-<tr>
-<td title='loginscriptviaregister.adminverfyemail2.test()'><b>test</b><br>Test class: loginscriptviaregister.adminverfyemail2<br/>
-<a href="#Output-628487793" onClick='toggleBox("Output-628487793", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-628487793" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-628487793">
-the admin is verified<br/>
-</div>
-</td>
-<td></td>
-<td>49</td>
-<td>loginscriptviaregister.adminverfyemail2@51e2adc7</td></tr>
-<tr>
-<td title='loginscriptviaregister.adminemail.test()'><b>test</b><br>Test class: loginscriptviaregister.adminemail<br/>
-<a href="#Output-2099932844" onClick='toggleBox("Output-2099932844", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2099932844" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2099932844">
-the admin is verified<br/>
-</div>
-</td>
-<td></td>
-<td>55</td>
-<td>loginscriptviaregister.adminemail@1a8a8f7c</td></tr>
-<tr>
-<td title='loginscriptviaregister.agentverified.test()'><b>test</b><br>Test class: loginscriptviaregister.agentverified<br/>
-<a href="#Output-233519968" onClick='toggleBox("Output-233519968", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-233519968" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-233519968">
-the agent is verified<br/>
+<a href="#Output-2082509879" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2082509879">
+ system logs element is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>37</td>
-<td>loginscriptviaregister.agentverified@2353b3e6</td></tr>
-<tr>
-<td title='loginscriptviaregister.agentviaemail.test()'><b>test</b><br>Test class: loginscriptviaregister.agentviaemail<br/>
-<a href="#Output-409596180" onClick='toggleBox("Output-409596180", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-409596180" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-409596180">
-the agent is verified<br/>
-</div>
-</td>
-<td></td>
-<td>41</td>
-<td>loginscriptviaregister.agentviaemail@631330c</td></tr>
-<tr>
-<td title='loginscriptviaregister.agentdeactivate.test()'><b>test</b><br>Test class: loginscriptviaregister.agentdeactivate<br/>
-<a href="#Output-101601906" onClick='toggleBox("Output-101601906", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-101601906" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-101601906">
-the agent  is BAN!! or DEACTIVATED!!!<br/>
-</div>
-</td>
-<td></td>
-<td>24</td>
-<td>loginscriptviaregister.agentdeactivate@42f93a98</td></tr>
-<tr>
-<td title='loginscriptviaregister.adminverified.test()'><b>test</b><br>Test class: loginscriptviaregister.adminverified<br/>
-<a href="#Output-1498621286" onClick='toggleBox("Output-1498621286", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1498621286" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1498621286">
-the admin is verified<br/>
-</div>
-</td>
-<td></td>
-<td>37</td>
-<td>loginscriptviaregister.adminverified@c46bcd4</td></tr>
-<tr>
-<td title='loginscriptviaregister.admindeactivate.test()'><b>test</b><br>Test class: loginscriptviaregister.admindeactivate<br/>
-<a href="#Output-536671860" onClick='toggleBox("Output-536671860", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-536671860" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-536671860">
-the admin is BAN!! or DEACTIVATED!!!<br/>
-</div>
-</td>
-<td></td>
-<td>20</td>
-<td>loginscriptviaregister.admindeactivate@3234e239</td></tr>
-<tr>
-<td title='loginscriptviaregister.adminban.test()'><b>test</b><br>Test class: loginscriptviaregister.adminban<br/>
-<a href="#Output-2079051109" onClick='toggleBox("Output-2079051109", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2079051109" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2079051109">
-the admin is BAN!! or DEACTIVATED!!!<br/>
-</div>
-</td>
-<td></td>
-<td>14</td>
-<td>loginscriptviaregister.adminban@3d921e20</td></tr>
-<tr>
-<td title='loginscriptviaregister.clientverifiedemail1.test()'><b>test</b><br>Test class: loginscriptviaregister.clientverifiedemail1<br/>
-<a href="#Output-447144896" onClick='toggleBox("Output-447144896", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-447144896" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-447144896">
-the user is unverified<br/>
-</div>
-</td>
-<td></td>
-<td>14</td>
-<td>loginscriptviaregister.clientverifiedemail1@36b4cef0</td></tr>
-<tr>
-<td title='loginscriptviaregister.userdeactivated.test()'><b>test</b><br>Test class: loginscriptviaregister.userdeactivated<br/>
-<a href="#Output-538375433" onClick='toggleBox("Output-538375433", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-538375433" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-538375433">
-the user is ban or deactivated<br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>loginscriptviaregister.userdeactivated@fad74ee</td></tr>
-<tr>
-<td title='loginscriptviaregister.agentban.test()'><b>test</b><br>Test class: loginscriptviaregister.agentban<br/>
-<a href="#Output-79094208" onClick='toggleBox("Output-79094208", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-79094208" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-79094208">
-the agent  is BAN!! or DEACTIVATED!!!<br/>
-</div>
-</td>
-<td></td>
-<td>20</td>
-<td>loginscriptviaregister.agentban@1a1d6a08</td></tr>
-<tr>
-<td title='loginscriptviaregister.clientverified.test()'><b>test</b><br>Test class: loginscriptviaregister.clientverified<br/>
-<a href="#Output-220689785" onClick='toggleBox("Output-220689785", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-220689785" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-220689785">
-the user is unverified<br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>loginscriptviaregister.clientverified@37d31475</td></tr>
+<td>scriptemailsettings.systemslogs@bd8db5a</td></tr>
 </table><p>
 </body>
 </html>

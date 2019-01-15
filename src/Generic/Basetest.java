@@ -11,22 +11,16 @@ import org.testng.annotations.Parameters;
 
 public class Basetest implements Autoconstant
 {
-public  WebDriver driver;
-static
-{
-	System.setProperty(ChromeKey, ChromeValue);
-	System.setProperty(GeckoKey, GeckoValue);	
-}
-@Parameters("browser")
-@BeforeMethod(alwaysRun=true)
-public void beforemethod(String browser)
-{
-	if(browser.equals("chrome"))
+
+	public static WebDriver driver;
+	@Parameters("browser")
+	@BeforeMethod
+	public void beforemethod()
+	{
+		System.setProperty(ChromeKey, ChromeValue);
 		driver=new ChromeDriver();
-		else
-			driver=new FirefoxDriver();
-		driver.get("http://lbws.ml/master48/");
-}
+		driver.get("http://localhost/faveo-helpdesk-advance/public/");
+	}
 @AfterMethod(alwaysRun=true)
 public void aftermethod(ITestResult res) throws InterruptedException
 {
@@ -34,7 +28,7 @@ public void aftermethod(ITestResult res) throws InterruptedException
 	String name=res.getMethod().getMethodName();
 	if(status==2)
 		Screenshot.getphoto(driver,name);
-	Thread.sleep(2000);
+	//driver.quit();
 	driver.close();
 }
 

@@ -1,13 +1,16 @@
 package Page;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Generic.Basepage1;
+import Generic.inputarray;
 
 public class faveoadminpage extends Basepage1
 {
@@ -31,7 +34,7 @@ public class faveoadminpage extends Basepage1
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			this.login.click();
 		}
-		public void username(String username)
+		public void username(String  username)
 		{
 			this.un.sendKeys(username);
 		}

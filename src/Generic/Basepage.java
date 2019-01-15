@@ -3,7 +3,7 @@ package Generic;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
@@ -20,21 +20,95 @@ public class Basepage
 	{
 		this.driver=driver;
 	}
-	public void elementvisiblity(WebElement element)
+	public void systemlogselementvisiblity(WebElement element)
 	{
-		//WebDriverWait wait=new WebDriverWait(driver,100);
-		 Timeouts wait=driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebDriverWait wait=new WebDriverWait(driver,100);
 		try
 		{
 			
-			Reporter.log("element is displayed",true);
+			Reporter.log(" system logs element is displayed",true);
 	
 		}
 		catch(Exception e)
 		{
-			Reporter.log("element not displayed", true);
+			Reporter.log("system logs element not displayed", true);
 			Assert.fail();
 		}
-
+		
 }
+	public void exceptionlogselementvisiblity( WebElement element)
+	{
+		WebDriverWait wait=new WebDriverWait(driver,100);
+		 //Timeouts wait=driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		try
+		{
+			
+			Reporter.log(" exception logs element is displayed",true);
+	
+		}
+		catch(Exception e)
+		{
+			Reporter.log("exception logs element not displayed", true);
+			Assert.fail();
+		}
+	
+}
+	public void cronelementvisiblity(WebElement element) 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,100);
+
+			try
+			{
+				
+				Reporter.log(" cronlogs  element is displayed",true);
+		
+			}
+			catch(Exception e)
+			{
+				Reporter.log("cronlogs element is not displayed", true);
+				Assert.fail();
+			}
+		
+	}
+	public void email_logs_elementvisiblity(WebElement element) 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,100);
+
+			try
+			{
+				
+				Reporter.log(" email logs  element is displayed",true);
+		
+			}
+			catch(Exception e)
+			{
+				Reporter.log("email logs element is not displayed", true);
+				Assert.fail();
+			}
+		
+	}
+	
+	public void check_systemLogs_breadcrumb(WebElement element)
+	{
+		WebDriverWait wait=new WebDriverWait(driver,100);
+
+		try
+		{
+			
+			Reporter.log(" its system logs page",true);
+	
+		}
+		catch(Exception e)
+		{
+			Reporter.log("its not systemlogs page", true);
+			Assert.fail();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
 }

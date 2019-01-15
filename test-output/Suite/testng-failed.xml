@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="loginscriptviaregister.adminunverified">
+      <class name="scriptemailsettings.systemslogs">
         <methods>
+          <include name="aftermethod"/>
           <include name="test"/>
           <include name="beforemethod"/>
-          <include name="aftermethod"/>
         </methods>
-      </class> <!-- loginscriptviaregister.adminunverified -->
+      </class> <!-- scriptemailsettings.systemslogs -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
