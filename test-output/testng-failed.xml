@@ -3,20 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scriptemailsettings.systemslogs">
+      <class name="installationscript.InstallationScriptLocally">
         <methods>
-          <include name="Testpickcrondate"/>
-          <include name="TestDeleteException"/>
-          <include name="TestCheckMaillogs"/>
+          <include name="installationtest"/>
           <include name="aftermethod"/>
-          <include name="TestCheckLogsCategory"/>
-          <include name="TestCheckLogsCreateddate"/>
-          <include name="TestCheckcronlogs"/>
           <include name="beforemethod"/>
-          <include name="TestDeleteMail"/>
-          <include name="TestDeleteCron"/>
         </methods>
-      </class> <!-- scriptemailsettings.systemslogs -->
+      </class> <!-- installationscript.InstallationScriptLocally -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
