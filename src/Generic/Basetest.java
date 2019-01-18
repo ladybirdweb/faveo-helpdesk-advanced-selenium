@@ -3,8 +3,14 @@ package Generic;
 import java.util.concurrent.TimeUnit;
 
 
+
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,11 +23,20 @@ public class Basetest implements Autoconstant
 	public static WebDriver driver;
 	@Parameters("browser")
 	@BeforeMethod
-	public void beforemethod()
+	public void beforemethod(String browser)
 	{
-		System.setProperty(ChromeKey, ChromeValue);
-		driver=new ChromeDriver();
-		driver.get("http://localhost/faveo-helpdesk-advance/public/");
+		if(browser.equals("chrome")){
+			System.setProperty(ChromeKey,ChromeValue);
+			driver=new ChromeDriver();
+		}
+		else
+		{
+			System.setProperty(GeckoKey,GeckoValue);
+			driver=new FirefoxDriver();
+		}
+		/*System.setProperty(ChromeKey, ChromeValue);
+		driver=new ChromeDriver();*/
+		driver.get(URL);
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
@@ -36,6 +51,21 @@ public class Basetest implements Autoconstant
     	driver.close();
     }
 
+    public static  boolean isClickable(WebElement webe)      
+	{
+	try
+	{
+	   WebDriverWait wait = new WebDriverWait(driver, 5);
+	   wait.until(ExpectedConditions.elementToBeClickable(webe));
+	   return true;
+	}
+	catch (Exception e)
+	{
+	  return false;
+	}
+	}
 }
+
+
 
 

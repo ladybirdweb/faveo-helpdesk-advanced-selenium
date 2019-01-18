@@ -7,9 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 import Generic.Basetest;
 import Generic.selec;
 
+//Edit email xpath and delete email xpath keep n mind before executing//
 public class EmailConfigurationPage extends Basetest{
 	
 	//Login In NavigationBar
@@ -116,7 +119,47 @@ public class EmailConfigurationPage extends Basetest{
 	//Update button
 	@FindBy(xpath="//button[@class='btn btn-primary update-btn']")
 	private WebElement ClickOnUpdate;
+	
+	//Success Message
+	@FindBy(id="alert-message")
+	public WebElement ActualSuccessMessage;
+	
+	//Breadcrumb for email from create email
+	@FindBy(xpath="//a[text()='Emails']")
+	private WebElement EmailBreadcrumb;
+	
+	//For editing def mail
+	@FindBy(xpath="//a[@href='http://localhost/faveo-helpdesk-advance/public/emails/1/edit']")
+	private WebElement EditDefEmail;
 
+	//For editing other mail and making it default
+	@FindBy(xpath="//a[@href='http://localhost/faveo-helpdesk-advance/public/emails/2/edit']")
+	private WebElement EditMailForDef;
+	
+	//Editing only incoming mail and selecting delete mails after fetch option
+	@FindBy(xpath="//a[@href='http://localhost/faveo-helpdesk-advance/public/emails/3/edit']")
+	private WebElement EditEmailForDelFetMails;
+	
+	
+	//Selecting checkbox for deleting fetched emails
+	@FindBy(id="sending_status")
+	private WebElement DelFetchEmail;
+	
+	//Select checkbox for making as default
+	@FindBy(xpath="html/body/div[1]/div/section[2]/div/div/div/div[6]/div/input")
+	private WebElement DefCheckbox;
+	
+	//Deleting the System mail ID
+	@FindBy(xpath="//a[@data-target='#delete1']")
+	private WebElement DelEmail;
+	@FindBy(xpath="//a[@href='http://localhost/faveo-helpdesk-advance/public/delete/emailpopup/1']")
+	private WebElement DelOnPopup;
+	
+	//Deleting the System mail ID which is default
+	@FindBy(xpath="//a[@data-target='#delete2']")
+	private WebElement DefDelEmail;
+	
+	
 	
 	public EmailConfigurationPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -175,12 +218,99 @@ public class EmailConfigurationPage extends Basetest{
 		this.DisableOutgoing.click();
 	}
 
-	public void IncomingDetails(){
+	public void SelectImap(){
 		selec simap = new selec();
 		simap.selectbyvalue(SelectImap,"imap");
 	}
 	
+	public void EnterIncHostName(String incHost){
+		this.EnterIncHostName.sendKeys(incHost);
+	}
 	
+	public void EnterIncPort(){
+		this.EnterIncomingPort.sendKeys("993");;
+	}
+	
+	public void FetchingEncr(){
+		selec fetenc = new selec();
+		fetenc.selectbyvalue(SelectFetchingEncryption, "ssl");
+	}
+
+	public void SelectSmtp(){
+		selec ssmtp = new selec();
+		ssmtp.selectbyvalue(SelectSmtp,"smtp");
+	}
+	
+	public void EnterOutHostName(String outHost){
+		this.EnterOutHostName.sendKeys(outHost);
+	}
+	
+	public void EnterOutPortSSL(){
+		this.EnterOutgoingPort.sendKeys("465");
+	}
+	
+	public void EnterOutPortTLS(){
+		this.EnterOutgoingPort.sendKeys("587");
+	}
+	
+	public void SendingEncr(){
+		selec sendenc = new selec();
+		sendenc.selectbyvalue(SelectSendingEncryption, "ssl");
+	}
+	
+	public void SendingEncrTLS(){
+		selec sendenc = new selec();
+		sendenc.selectbyvalue(SelectSendingEncryption, "tls");
+	}
+
+	public void ClickOnSave(){
+		this.ClickOnSave.click();
+	}
+
+	public void ClickOnUpdate(){
+		this.ClickOnUpdate.click();
+	}
+	
+	public void ClickOnBreadcrumb(){
+		this.EmailBreadcrumb.click();
+	}
+	
+	public void EditDefEmail(){
+		this.EditDefEmail.click();
+	}
+	
+	public void EditMailForDef(){
+		this.EditMailForDef.click();
+	}
+	
+	public void EditEmailForDelFetMails(){
+		this.EditEmailForDelFetMails.click();
+	}
+	
+	public void SelDelFetchEmails(){
+		this.DelFetchEmail.click();
+	}
+	
+	public void DefCheckbox(){
+		this.DefCheckbox.click();
+	}
+	
+	public void DelEmail() throws InterruptedException{
+		this.DelEmail.click();
+		Thread.sleep(2000);
+	}
+	
+	public void DelOnPopup(){
+		this.DelOnPopup.click();
+	}
+	
+	public void DefDelEmail(){
+		this.DefDelEmail.click();
+	}
+	
+}
+
+
 	
 
-}
+

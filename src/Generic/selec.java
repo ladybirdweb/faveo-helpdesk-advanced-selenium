@@ -10,7 +10,7 @@ public class selec
 		Select  selec=new Select(element);
 		selec.selectByIndex(index);
 	}
-	public static void selectbyvalue(WebElement element,String value)
+	public void selectbyvalue(WebElement element,String value)
 	{
 		Select selec =new Select(element);
 		selec.selectByValue(value);
