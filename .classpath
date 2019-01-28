@@ -7,7 +7,6 @@
 	<classpathentry kind="lib" path="jars/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="jars/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="jars/curvesapi-1.04.jar"/>
-	<classpathentry kind="lib" path="jars/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="jars/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="jars/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="jars/poi-examples-3.17.jar"/>
@@ -17,5 +16,6 @@
 	<classpathentry kind="lib" path="jars/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="jars/selenium-server-standalone-3.14.0.jar"/>
 	<classpathentry kind="lib" path="jars/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="jars/junit-4.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

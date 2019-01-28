@@ -1,23 +1,17 @@
 package scriptemailsettings;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import Generic.Basetest;
 import Generic.input;
 import Page.faveoadminpage;
-import Page.logs;
+
 import emailsettings.systemlogs;
 
 public class systemslogs extends Basetest 
@@ -36,7 +30,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 	    //check wether the system logs page is present
 		logs.checkbreadcrumb();
@@ -72,7 +66,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//click on delete logs
 		logs.clickdeletelogs();
@@ -102,7 +96,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//click on delete logs
 		logs.clickdeletelogs();	
@@ -133,7 +127,7 @@ public class systemslogs extends Basetest
 		
 	
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//check for the presence of the element
 		 logs.entercategorylog();
@@ -155,7 +149,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//picking the logs create date
 		logs.ticketcreateddate();
@@ -178,7 +172,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,500)");
@@ -200,7 +194,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//scrolling for picking  of the cron date
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -223,7 +217,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		JavascriptExecutor jsemail = (JavascriptExecutor) driver;
 		jsemail.executeScript("window.scrollBy(0,1000)");
@@ -246,7 +240,7 @@ public class systemslogs extends Basetest
 		
 		//click on the systemlogs logo
 		systemlogs logs=new systemlogs(driver);
-		logs.systemlogs();
+		logs.systemlogsadminpage();
 		
 		//select the mail logs sender
 		logs.selectmaillogssender();

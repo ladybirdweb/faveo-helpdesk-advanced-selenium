@@ -6,6 +6,8 @@ public interface Autoconstant
 	String ChromeValue="./driver/chromedriver.exe";
 	String GeckoKey="webdriver.gecko.driver";
 	String GeckoValue="./driver/geckodriver.exe";
+	String IEkey="webdriver.ie.driver";
+	String IEvalue="./driver/IEDriverServer.exe";
 	String excel="./data/New Microsoft Excel Worksheet.xlsx";
  
 }

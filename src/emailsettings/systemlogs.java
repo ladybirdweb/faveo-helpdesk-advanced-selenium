@@ -3,23 +3,23 @@ package emailsettings;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import Generic.Basepage;
 
 public class systemlogs extends Basepage 
 {
     //systemlogs logo
-	@FindBy(xpath="/html/body/div/div/section[2]/div[8]/div[2]/div/div/div[3]/div/div/a/span/i")
+	@FindBy(xpath="/html/body/div/div/section[2]/div[7]/div[2]/div/div/div[3]/div/div/a")
 	private WebElement systemlogs;
 	
 	//check for breadcrumb
@@ -86,10 +86,16 @@ public class systemlogs extends Basepage
 	@FindBy(xpath="//h3[@id='cron_logs_title']")
 	private WebElement cronlogs;
 	
+	//click on subject
+	@FindBy(xpath="//div[@index='1']//parent::td[@class='mail-subject']")
+	private WebElement clciksubject;
+	
 	
 	//check on mail logs
 	@FindBy(xpath="//h3[@id='mail_logs_title']")
 	private WebElement maillogs;
+	
+	
    
 	//to initialize the constructor
 	public systemlogs(WebDriver driver) 
@@ -99,7 +105,7 @@ public class systemlogs extends Basepage
 	}
 
 	//method for clicking the system logs
-	public void systemlogs()
+	public void systemlogsadminpage()
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1900)");
@@ -331,13 +337,12 @@ public class systemlogs extends Basepage
 		
 	}
 	
-	//select the mail log reciver
-	//public void selectmaillogreciver() throws AWTException, InterruptedException
-	//{   
-		//this.maillogsreciver.click();
-		//Robot robot2 = new Robot();
-		//robot2.keyPress(KeyEvent.VK_ENTER);
-	    //Thread.sleep(2000);
-	//}
+	public void click_on_subject() throws InterruptedException
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,2900)");
+		Thread.sleep(3000);
+		this.clciksubject.click();
+	}
   
 }

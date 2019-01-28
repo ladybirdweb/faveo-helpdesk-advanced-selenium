@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="scriptemailsettings.systemslogs">
+      <class name="logsfunctionalityscript.scriptcreateticket">
         <methods>
+          <include name="createtickets"/>
           <include name="aftermethod"/>
-          <include name="test"/>
           <include name="beforemethod"/>
         </methods>
-      </class> <!-- scriptemailsettings.systemslogs -->
+      </class> <!-- logsfunctionalityscript.scriptcreateticket -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

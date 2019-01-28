@@ -1,8 +1,12 @@
 package Generic;
 
+
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,12 +17,26 @@ public class Basetest implements Autoconstant
 {
 
 	public static WebDriver driver;
-	@Parameters("browser")
-	@BeforeMethod
-	public void beforemethod()
+	static 
 	{
 		System.setProperty(ChromeKey, ChromeValue);
-		driver=new ChromeDriver();
+		System.setProperty(GeckoKey, GeckoValue);
+		System.setProperty(IEkey, IEvalue);
+	}
+	
+	@Parameters("browser")
+	@BeforeMethod(alwaysRun=true)
+	public void beforemethod(String browser)
+	{
+		if(browser.equals("chrome"))
+			driver=new ChromeDriver();
+			else if(browser.equals("firefox"))
+			{
+				driver=new FirefoxDriver();
+			}
+			else
+				driver=new InternetExplorerDriver();
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("http://localhost/faveo-helpdesk-advance/public/");
 	}
 @AfterMethod(alwaysRun=true)
@@ -29,12 +47,9 @@ public void aftermethod(ITestResult res) throws InterruptedException
 	if(status==2)
 		Screenshot.getphoto(driver,name);
 	//driver.quit();
-	driver.close();
+	Thread.sleep(3500);
+	//driver.close();
 }
-
-
-
-
 
 
 }

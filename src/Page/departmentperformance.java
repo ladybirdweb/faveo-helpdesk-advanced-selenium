@@ -23,7 +23,8 @@ public class departmentperformance extends Basepage
 	private WebElement reportpage;
 	@FindBy(xpath="/html/body/div/div/section[2]/div[3]/div[2]/div/div/div[2]/div/div/a/span/i")
 	private WebElement departmentperformance;
-	public departmentperformance(WebDriver driver) {
+	public departmentperformance(WebDriver driver) 
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}

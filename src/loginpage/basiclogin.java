@@ -44,7 +44,7 @@ public class basiclogin extends Basepage1
 	public void clicklogin1() throws InterruptedException
 	{
 		this.login1.click();
-		Thread.sleep(2000);
+		Thread.sleep(3500);
 	} 
 	public void adminpanel()
 	{

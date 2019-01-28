@@ -24,6 +24,14 @@ public class faveoadminpage extends Basepage1
 	private WebElement login1;
 	@FindBy(xpath="//a[contains(text(),'Admin Panel')]")
 	private WebElement Adminpanel;
+	
+	@FindBy(xpath="//span[@title='Agentaa']//parent::a[@class='dropdown-toggle']")
+	private WebElement clickprofile;
+	
+	
+	@FindBy(xpath="//a[@class='btn btn-danger btn-sm']")
+	private WebElement clicklogout;
+	
 	public faveoadminpage(WebDriver driver) 
 	{
 		super(driver);
@@ -52,5 +60,14 @@ public class faveoadminpage extends Basepage1
 			this.Adminpanel.click();
 		}
 		
+		public void clickprofile()
+		{
+			this.clickprofile.click();
+		}
+		
+		public void clickonlogout()
+		{
+			this.clicklogout.click();
+		}
 
 }
