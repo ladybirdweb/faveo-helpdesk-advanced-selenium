@@ -76,10 +76,12 @@ private WebElement selecttype;
 @FindBy(xpath="//button[@id='submitForm']")
 private WebElement clicksubmit;
 
-////visiblity of ticket create
-//@FindBy(xpath="//div[@index='1']//parent::td[@class='mail-subject']")
-//private WebElement clciksubject;
-	
+//click on logout when login as agent
+@FindBy(xpath="//li[@class='dropdown user user-menu']")
+private WebElement logoutagent;
+
+@FindBy(xpath="//a[@class='btn btn-danger btn-sm']")
+private WebElement clickonlogoutbtn;
 	
 public createticket(WebDriver driver) {
 		super(driver);
@@ -89,7 +91,7 @@ public createticket(WebDriver driver) {
 //method for clicking the create ticket
 public void clickcreateticket() throws InterruptedException
 {
-	Thread.sleep(3000);
+	Thread.sleep(3500);
 	this.sidebarcreateticket.click();
 }
 
@@ -193,6 +195,16 @@ public void givedescription() throws InterruptedException, AWTException
 	driver.findElement(By.xpath("//a[@title='T']")).click();
 	Thread.sleep(2500);
 	this.clicksubmit.click();
+}
+
+public void clicklogoutagent()
+{
+	this.logoutagent.click();
+}
+
+public void clicklogoutbttn()
+{
+	this.clickonlogoutbtn.click();
 }
 
 }

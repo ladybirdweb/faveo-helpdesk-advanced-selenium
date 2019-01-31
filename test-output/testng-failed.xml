@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test1(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="logsfunctionalityscript.scriptcreateticket">
+      <class name="logsfunctionalityscript.checkforuserlogs">
         <methods>
-          <include name="createtickets"/>
           <include name="aftermethod"/>
           <include name="beforemethod"/>
+          <include name="checkloguser"/>
         </methods>
-      </class> <!-- logsfunctionalityscript.scriptcreateticket -->
+      </class> <!-- logsfunctionalityscript.checkforuserlogs -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="logsfunctionalityscript.checkforuserlogs">
+        <methods>
+          <include name="aftermethod"/>
+          <include name="beforemethod"/>
+          <include name="checkloguser"/>
+        </methods>
+      </class> <!-- logsfunctionalityscript.checkforuserlogs -->
+    </classes>
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

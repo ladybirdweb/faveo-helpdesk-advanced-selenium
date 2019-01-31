@@ -1,16 +1,11 @@
 package Page;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import Generic.Basepage1;
-import Generic.inputarray;
 
 public class faveoadminpage extends Basepage1
 {
@@ -54,9 +49,9 @@ public class faveoadminpage extends Basepage1
 		{
 			this.login1.click();
 		}
-		public void clickAdminpanel()
+		public void clickAdminpanel() throws InterruptedException
 		{
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			Thread.sleep(3000);
 			this.Adminpanel.click();
 		}
 		

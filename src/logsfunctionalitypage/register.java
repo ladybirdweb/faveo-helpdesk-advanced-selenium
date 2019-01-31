@@ -11,7 +11,7 @@ public class register extends Basepage
 {
 
 //click on register	
-@FindBy(xpath="//span[text()='Register']")
+@FindBy(xpath="//a[@href='http://localhost/faveo-helpdesk-advance/public/auth/register']")
 private WebElement clickregister;
 
 //enter the firstname
@@ -37,8 +37,9 @@ public register(WebDriver driver) {
 	}
 
 //method to click register button
-public void clickregisterbutton()
+public void clickregisterbutton() throws InterruptedException
 {
+	Thread.sleep(3000);
 	this.clickregister.click();
 }
 
