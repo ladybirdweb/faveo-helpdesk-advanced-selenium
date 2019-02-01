@@ -25,11 +25,10 @@ public class InstallationScriptLocally extends Basetest{
 	private static final String ProductKey3 = input.getdata(excel, "installation", 12, 1);
 	private static final String ProductKey4 = input.getdata(excel, "installation", 13, 1);
 	
-	@SuppressWarnings("unused")
+	
 	@Test
 	public void installationtest() throws InterruptedException
 	{
-		Basetest opbr = new Basetest();
 		InstallationPageLocally ipl = new InstallationPageLocally(driver);
 		ipl.probePage();
 		ipl.acceptCheckbox();

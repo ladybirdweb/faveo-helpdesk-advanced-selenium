@@ -13,6 +13,7 @@ public class DeleteEmailConfiguration extends Basetest {
 
 	/*	This method is for deleting the email */
 	@SuppressWarnings("static-access")
+	
 	@Test(priority=1)
 	public void deleteDefEmailConfig() throws InterruptedException
 	{

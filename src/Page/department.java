@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Generic.Basepage1;
 
-public class faveodepartment extends Basepage1 
+public class department extends Basepage1 
 {
 	@FindBy(xpath=".//*[@id='hid']/li/a/i")
 	private WebElement login;
@@ -23,7 +23,7 @@ public class faveodepartment extends Basepage1
 	private WebElement Adminpanel;
 	@FindBy(xpath="/html/body/div/div/section[2]/div[2]/div[2]/div/div/div[2]/div/div/a/span/i")
 	private WebElement Departments;
-	 public faveodepartment(WebDriver driver) {
+	 public department(WebDriver driver) {
 		 super(driver);
 		 PageFactory.initElements(driver, this);	 
 	}

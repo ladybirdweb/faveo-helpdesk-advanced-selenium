@@ -1,8 +1,10 @@
+
 package emailconfigurationscript;
 
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+
 import org.testng.annotations.Test;
 
 import Generic.Basetest;
@@ -10,7 +12,7 @@ import Generic.input;
 import emailconfigurationpage.EmailConfigurationPage;
 
 /*This class contains the email configuration with different testdata*/
-public class EmailConfigurationScript extends Basetest{
+public class EmailConfiguration extends Basetest{
 	
 	/*	It is for configuring email for the first time after installation
 	via email link provided*/
@@ -182,6 +184,8 @@ public class EmailConfigurationScript extends Basetest{
 	depEmail.SendingEncr();
 	depEmail.ClickOnSave();
 	Thread.sleep(10000);
+	
+	
 	}
 }
 

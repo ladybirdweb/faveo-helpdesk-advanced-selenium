@@ -1,9 +1,5 @@
 package Generic;
 
-import java.util.concurrent.TimeUnit;
-
-
-
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,35 +17,41 @@ public class Basetest implements Autoconstant
 {
 
 	public static WebDriver driver;
+	static 
+	{
+		System.setProperty(ChromeKey, ChromeValue);
+		System.setProperty(GeckoKey, GeckoValue);
+		//System.setProperty(IEkey, IEvalue);
+	}
+	
 	@Parameters("browser")
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void beforemethod(String browser)
 	{
-		if(browser.equals("chrome")){
-			System.setProperty(ChromeKey,ChromeValue);
+		if(browser.equals("chrome"))
 			driver=new ChromeDriver();
-		}
-		else
-		{
-			System.setProperty(GeckoKey,GeckoValue);
-			driver=new FirefoxDriver();
-		}
-		/*System.setProperty(ChromeKey, ChromeValue);
-		driver=new ChromeDriver();*/
+			else if(browser.equals("firefox"))
+			{
+				driver=new FirefoxDriver();
+			}
+			//else
+				//driver=new InternetExplorerDriver();
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get(URL);
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
-    @AfterMethod(alwaysRun=true)
-    public void aftermethod(ITestResult res) throws InterruptedException
-    {
-    	int status=res.getStatus();
-    	String name=res.getMethod().getMethodName();
-    	if(status==2)
+@AfterMethod(alwaysRun=true)
+public void aftermethod(ITestResult res) throws InterruptedException
+{
+	int status=res.getStatus();
+	String name=res.getMethod().getMethodName();
+	if(status==2)
 		Screenshot.getphoto(driver,name);
-    	//driver.quit();
-    	driver.close();
-    }
+	//driver.quit();
+	Thread.sleep(3500);
+	//driver.close();
+}
+
 
     public static  boolean isClickable(WebElement webe)      
 	{
