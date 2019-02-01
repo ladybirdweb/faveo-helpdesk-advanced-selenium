@@ -14,7 +14,7 @@ import emailconfigurationpage.EmailConfigurationPage;
 /*This class contains the email configuration with different testdata*/
 public class EmailConfiguration extends Basetest{
 	
-	/*	It is for configuring email for the first time after installation
+	/*It is for configuring email for the first time after installation
 	via email link provided*/
 
 	@Test(priority=1)
@@ -40,10 +40,8 @@ public class EmailConfiguration extends Basetest{
 	ecpLink.ClickOnSave();
 	Thread.sleep(10000);
 	}
-		
-	
 
-    /*It is for configuring email from adminpanel	*/	
+    /*It is for configuring email from adminpanel*/	
 	
 	@Test(priority=2)
 	public void emailConfigViaAdminPanel() throws InterruptedException
