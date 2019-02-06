@@ -4,25 +4,25 @@
   <test thread-count="5" name="Test1(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="logsfunctionalityscript.checkforuserlogs">
+      <class name="logsfunctionalityscript.Logs_forgot_password">
         <methods>
           <include name="aftermethod"/>
+          <include name="forgot_password"/>
           <include name="beforemethod"/>
-          <include name="checkloguser"/>
         </methods>
-      </class> <!-- logsfunctionalityscript.checkforuserlogs -->
+      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
     </classes>
   </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="logsfunctionalityscript.checkforuserlogs">
+      <class name="logsfunctionalityscript.Logs_forgot_password">
         <methods>
           <include name="aftermethod"/>
+          <include name="forgot_password"/>
           <include name="beforemethod"/>
-          <include name="checkloguser"/>
         </methods>
-      </class> <!-- logsfunctionalityscript.checkforuserlogs -->
+      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
     </classes>
   </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

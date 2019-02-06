@@ -5,8 +5,9 @@ import Generic.input;
 import Page.faveoadminpage;
 import Page.users;
 import emailsettings.systemlogs;
+import logsfunctionalitypage.Logs_Assign_ticket_page;
 
-public class checkforuserlogs extends Basetest 
+public class Logs_check_for_user_logs_agent_script extends Basetest 
 {
   @Test
   public  void checkloguser() throws InterruptedException
@@ -66,10 +67,12 @@ public class checkforuserlogs extends Basetest
 		//click on admin panel
 		systemlogs logs=new systemlogs(driver);
 		logs.systemlogsadminpage();
+		Logs_Assign_ticket_page ticket=new Logs_Assign_ticket_page(driver);
+		ticket.checkcategory();
 		
 		//check with the subject for the system logs
 		//Thread.sleep(2000);
-		logs.click_on_subject();
+		
 		
 		
 		

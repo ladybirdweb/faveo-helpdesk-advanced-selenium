@@ -27,32 +27,32 @@ public class users extends Basepage
 	private WebElement directory;
 	
 	//click on create user
-		@FindBy(xpath="//span[@class='glyphicon glyphicon-plus']")
-		private WebElement createuser;
+    @FindBy(xpath="//span[@class='glyphicon glyphicon-plus']")
+	private WebElement createuser;
 		
-		//enter name of the user
-		@FindBy(xpath="//input[@name='textfield0']")
-		private WebElement enterfirstnameuser;
+	//enter name of the user
+	@FindBy(xpath="//input[@name='textfield0']")
+	private WebElement enterfirstnameuser;
 
-		//enter lname of user
-		@FindBy(xpath="//input[@name='textfield1']")
-		private WebElement enterlastnameuser;
+	//enter lname of user
+	@FindBy(xpath="//input[@name='textfield1']")
+	private WebElement enterlastnameuser;
 		
-		//enter email of the user
-		@FindBy(xpath="//input[@name='mail4']")
-		private WebElement enteremailuser;
+	//enter email of the user
+	@FindBy(xpath="//input[@name='mail4']")
+	private WebElement enteremailuser;
 		
-		//click on submit
-		@FindBy(xpath="//button[@ng-disabled='faveoForm.$invalid']")
+	//click on submit
+	@FindBy(xpath="//button[@ng-disabled='faveoForm.$invalid']")
 		private WebElement clickonsubmituser;
 		
-		//click on agent for logout
-		@FindBy(xpath="//span[@class='hidden-xs']")
-		private WebElement clickagent;
+	//click on agent for logout
+	@FindBy(xpath="//span[@class='hidden-xs']")
+	private WebElement clickagent;
 		
-		//click on logout
-		@FindBy(xpath="//a[@class='btn btn-danger btn-sm']")
-		private WebElement clicklogout;
+	//click on logout
+	@FindBy(xpath="//a[@class='btn btn-danger btn-sm']")
+	private WebElement clicklogout;
 		
 		
 		

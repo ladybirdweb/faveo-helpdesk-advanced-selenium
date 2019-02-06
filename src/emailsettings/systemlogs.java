@@ -3,18 +3,15 @@ package emailsettings;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-
+import org.testng.Assert;
 import Generic.Basepage;
+
 
 public class systemlogs extends Basepage 
 {
@@ -90,13 +87,10 @@ public class systemlogs extends Basepage
 	@FindBy(xpath="//div[@index='1']//parent::td[@class='mail-subject']")
 	private WebElement clciksubject;
 	
-	
 	//check on mail logs
 	@FindBy(xpath="//h3[@id='mail_logs_title']")
 	private WebElement maillogs;
 	
-	
-   
 	//to initialize the constructor
 	public systemlogs(WebDriver driver) 
 	{
@@ -111,7 +105,7 @@ public class systemlogs extends Basepage
 		js.executeScript("window.scrollBy(0,1900)");
 		this.systemlogs.click();
 	}
-	
+
 	//method for checking the breadcrumb
 	public void checkbreadcrumb()
 	{
@@ -325,24 +319,71 @@ public class systemlogs extends Basepage
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
-		
 		this.maillogssender.click();
 		Robot robot1 = new Robot();
 		robot1.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
-		robot1.keyPress(KeyEvent.VK_TAB);
-		
+		robot1.keyPress(KeyEvent.VK_TAB);	
 		Thread.sleep(2000);
 		robot1.keyPress(KeyEvent.VK_ENTER);
 		
 	}
 	
-	public void click_on_subject() throws InterruptedException
+	//check for ticket create
+	public void checkticketcreate() throws InterruptedException
 	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,2900)");
-		Thread.sleep(3000);
-		this.clciksubject.click();
+		  Thread.sleep(3000);
+	      JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scrollBy(0,3900)");
+		  String Actual=driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[4]/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();	
+		  String expected="ticket-create";
+		  Assert.assertEquals(Actual, expected);
+    }
+	
+	//check for user create
+	public void checkusercreate() throws InterruptedException
+	{
+		 Thread.sleep(3000);
+	     JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,3900)");
+		 String Actual=driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[4]/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();	
+		 String expected="user-create";
+		 Assert.assertEquals(Actual, expected);
 	}
-  
+	
+	//check for ticket reply
+	public void checkticketreply() throws InterruptedException
+	{
+		 Thread.sleep(3000);
+	     JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,3900)");
+		 String Actual=driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[4]/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();	
+		 String expected="ticket-reply";
+		 Assert.assertEquals(Actual, expected);	
+	}
+	
+	//check for ticket update
+	public void checkticketupdate() throws InterruptedException
+	{
+		 Thread.sleep(3000);
+	     JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,3900)");
+		 String Actual=driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[4]/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();	
+		 String expected="ticket-update";
+		 Assert.assertEquals(Actual, expected);	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+

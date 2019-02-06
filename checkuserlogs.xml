@@ -4,20 +4,14 @@
   <test  name="Test1">
   <parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="logsfunctionalityscript.checkforuserlogs"/>
+      <class name="logsfunctionalityscript.Logs_check_for_user_logs_agent_script"/>
     </classes>
-    
     </test>
     
    <test  name="Test2">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="logsfunctionalityscript.checkforuserlogs"/>
+      <class name="logsfunctionalityscript.Logs_check_for_user_logs_agent_script"/>
     </classes> 
-    
-    
-    
-    
-    
   </test> <!-- Test -->
 </suite> <!-- Suite -->

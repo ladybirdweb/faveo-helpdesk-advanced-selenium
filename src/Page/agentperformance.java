@@ -54,17 +54,4 @@ public class agentperformance extends Basepage
 		this.agentperformance.click();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

@@ -12,9 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import Generic.Basepage;
 
-public class createticketclient extends Basepage 
+public class Logs_create_ticket_client_page extends Basepage 
 {
-
 	//click on submit ticket
 	@FindBy(xpath="//span[text()='Submit a ticket']")
 	private WebElement clickonsubmitticketclient;
@@ -31,10 +30,6 @@ public class createticketclient extends Basepage
 	@FindBy(xpath="//select[@name='selected5']")
 	private WebElement selecthelptopicclient;
 	
-	//give description
-	//@FindBy(xpath="//span[@class='cke_button_icon cke_button__link_icon']")
-	//private WebElement clickondescriptionagent;
-	
 	//click on submit
 	@FindBy(xpath="//div[@class='row']//button[@class='btn btn-info']")
 	private WebElement clicksubmitclient;
@@ -47,8 +42,21 @@ public class createticketclient extends Basepage
 	@FindBy(xpath="//div[@class='banner-content']//a[text()='Logout']")
 	private WebElement clicklogout;
 	
-
-	public createticketclient(WebDriver driver) {
+	//code for replying as a client
+	
+	//click on my tickets
+	@FindBy(xpath="//*[@id=\"navbar\"]/nav/ul[1]/li[4]")
+	private WebElement clickmyticketsclient;
+	
+	//click on the ticket
+	@FindBy(xpath="//div[@class='site-content col-md-12']//a[text()='this is test ms... ']")
+    private WebElement clickontheticketclient;
+	
+	//click on reply
+	@FindBy(xpath="//i[@class='fa fa-reply-all']")
+	private WebElement clickonreplycommentclient;
+	
+	public Logs_create_ticket_client_page(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -95,13 +103,13 @@ public class createticketclient extends Basepage
 		js1.executeScript("window.scrollBy(0,1900)");
 		Thread.sleep(2500);
 		this.clicksubmitclient.click();
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 	}
 	
 	//method to click on my profile
 	public void clickonmyprofileclient() throws InterruptedException
 	{
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-1900)");
 		this.clickmyprofile.click();
 	}
 	
@@ -112,46 +120,53 @@ public class createticketclient extends Basepage
 		this.clicklogout.click();
 	}
 	
+	//reply for the client    (method)
 	
+	//click on my ticket
+	public void clickonmyticketclient() throws InterruptedException
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-1900)");
+		this.clickmyticketsclient.click();
+	}
 	
+	//click on the particular ticket
+	public void clickonticketclient() throws InterruptedException
+	{
+		Thread.sleep(3500);
+		this.clickontheticketclient.click();
+	}
 	
+	//give the description for the client ticket
+	public void givedescriptionticketclient() throws InterruptedException
+	{
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,6900)");
+		driver.findElement(By.xpath("//a[@class='cke_button cke_button__specialchar cke_button_off']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@title='T']")).click();
+		driver.findElement(By.xpath("//span[@class='cke_button_icon cke_button__specialchar_icon']")).click();
+		Thread.sleep(2500);
+		driver.findElement(By.xpath("//a[@title='E']")).click();
+		driver.findElement(By.xpath("//span[@class='cke_button_icon cke_button__specialchar_icon']")).click();
+		Thread.sleep(2500);
+		driver.findElement(By.xpath("//a[@title='S']")).click();
+		driver.findElement(By.xpath("//span[@class='cke_button_icon cke_button__specialchar_icon']")).click();
+		Thread.sleep(2500);
+		driver.findElement(By.xpath("//a[@title='T']")).click();
+		Thread.sleep(2500);
+		driver.findElement(By.xpath("//span[@class='cke_button_icon cke_button__horizontalrule_icon']")).click();
+		Thread.sleep(2500);
+		
+		Thread.sleep(3000);
+		
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//click on`reply
+	public void clickreplyclientticketbutton()
+	{
+		this.clickonreplycommentclient.click();
+	}
 	
 }

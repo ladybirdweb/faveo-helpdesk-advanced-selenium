@@ -55,9 +55,8 @@ public class alertsandnotices extends Basepage
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("window.scrollBy(0,890)");
 		 driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		 this.alertandnotices.click();
-		 
-	}
+		 this.alertandnotices.click(); 
+	}     
 	
 
 }

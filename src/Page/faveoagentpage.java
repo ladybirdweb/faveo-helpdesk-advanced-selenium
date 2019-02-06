@@ -2,6 +2,7 @@ package Page;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,7 @@ import Generic.Basepage1;
 
 public class faveoagentpage extends Basepage1 
 {
+	//login as admin
 	@FindBy(xpath=".//*[@id='hid']/li/a/i")
 	private WebElement login;
 	@FindBy(id="user_name")
@@ -22,14 +24,34 @@ public class faveoagentpage extends Basepage1
 	@FindBy(xpath="//a[contains(text(),'Admin Panel')]")
 	private WebElement Adminpanel;
 	
-	@FindBy(xpath="/html/body/div/div/section[2]/div[2]/div[2]/div/div/div[2]/div/div/a/span/i")
+	//click on agents
+	@FindBy(xpath="/html/body/div[1]/div/section[2]/div[1]/div[2]/div/div/div[1]/div/div/a/span/i")
 	private WebElement Agents;
+	
+	//click on view agent
+	@FindBy(xpath="//*[@id='chumper']/tbody/tr[1]/td[8]/a[1]")
+	private WebElement clickviewagent;
+	
+	//click on change password
+	@FindBy(xpath="/html/body/div[1]/div/section[2]/div[4]/div[4]/div/div[1]/div/div/div[1]/button[1]")
+	private WebElement clickchangepassword;
+	
+	//enter the new password
+	@FindBy(xpath="//div[@class='input-group']//input[@name='change_password']")
+	private WebElement enternewpassword;
+	
+	
+	//click on submit
+	@FindBy(xpath="//input[@id='savepassword']")
+	private WebElement clicksubmitbutton;
 	
 	public faveoagentpage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-	 public void clicklogin()
+	
+	    //click on login
+		public void clicklogin()
 		{
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			this.login.click();
@@ -46,15 +68,43 @@ public class faveoagentpage extends Basepage1
 		{
 			this.login1.click();
 		}
-		public void clickAdminpanel()
+		public void clickAdminpanel() throws InterruptedException
 		{
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			Thread.sleep(3500);
 			this.Adminpanel.click();
 		}
-		public void clickAgents()
+		
+		//method click on agents
+		public void clickAgents() throws InterruptedException
 		{
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			Thread.sleep(3500);
 			this.Agents.click();
 		}
-
+		
+		//method click on view agent
+		public void clickviewagent()
+		{
+			this.clickviewagent.click();
+		}
+		
+		//method for changing the password
+		public void clickchangepassword()
+		{
+			this.clickchangepassword.click();
+		}
+		
+		//enter new password
+		public void enternewpassword() throws InterruptedException
+		{
+			Thread.sleep(3500);
+			String s = RandomStringUtils.randomAlphanumeric(7);
+			this.enternewpassword.sendKeys(s);
+		}
+		
+		//click submitbutton
+		public void clicksubmitbutton()
+		{
+			this.clicksubmitbutton.click();
+		}
+		
 }

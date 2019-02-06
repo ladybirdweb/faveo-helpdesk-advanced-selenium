@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Generic.Basepage;
 
-public class logsvisiblitycheck extends Basepage 
+public class Logsvisiblitycheck extends Basepage 
 {
     //inspect dropdown systemlogs and debugging
 	@FindBy(xpath="//span[text()='System Logs and debugging']")
@@ -17,7 +17,7 @@ public class logsvisiblitycheck extends Basepage
 	@FindBy(xpath="//span[text()='System Logs']")
 	private WebElement systemlogsdropdown;
 	
-	public logsvisiblitycheck(WebDriver driver) {
+	public Logsvisiblitycheck(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
