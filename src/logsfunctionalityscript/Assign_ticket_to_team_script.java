@@ -9,7 +9,7 @@ import emailsettings.systemlogs;
 import logsfunctionalitypage.Logs_Assign_ticket_page;
 import logsfunctionalitypage.Logs_reply_as_agent_page;
 
-public class Logs_Assign_the_ticket_script extends Basetest 
+public class Assign_ticket_to_team_script extends Basetest 
 {
 	@Test
 	public void assignTicket () throws InterruptedException
@@ -31,14 +31,16 @@ public class Logs_Assign_the_ticket_script extends Basetest
 		Thread.sleep(3000);
 		agent.clickonticket();
 	    
-		//click on assign to
+		//click on assign to teams
 		Logs_Assign_ticket_page ticket=new Logs_Assign_ticket_page(driver);
 		ticket.clickonassign();
 		
-		//select the dropdown option
-		ticket.clickonassigndropdown();
 		
-		//click on assignbutton
+		//select to assign to teams
+		ticket.clickonassignteamdropdown();
+		Thread.sleep(3500);
+		
+		////click on assignbutton
 		ticket.clickonassignpopup();
 		Thread.sleep(3500);
 		
@@ -52,10 +54,6 @@ public class Logs_Assign_the_ticket_script extends Basetest
 		ticket.checkcategory();
 	
 		
-		
-		
-		
-	}
+				
 }
-
-
+}

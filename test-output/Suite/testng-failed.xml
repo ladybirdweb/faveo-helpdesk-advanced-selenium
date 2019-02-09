@@ -4,25 +4,13 @@
   <test thread-count="5" name="Test1(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="logsfunctionalityscript.Logs_forgot_password">
+      <class name="logsfunctionalityscript.Logs_change_status_client_script">
         <methods>
           <include name="aftermethod"/>
-          <include name="forgot_password"/>
+          <include name="check_status_client"/>
           <include name="beforemethod"/>
         </methods>
-      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
+      </class> <!-- logsfunctionalityscript.Logs_change_status_client_script -->
     </classes>
   </test> <!-- Test1(failed) -->
-  <test thread-count="5" name="Test2(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="logsfunctionalityscript.Logs_forgot_password">
-        <methods>
-          <include name="aftermethod"/>
-          <include name="forgot_password"/>
-          <include name="beforemethod"/>
-        </methods>
-      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
-    </classes>
-  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

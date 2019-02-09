@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="81964" started-at="2019-02-06T13:21:19Z" finished-at="2019-02-06T13:22:41Z">
+  <suite name="Suite" duration-ms="125447" started-at="2019-02-09T06:59:38Z" finished-at="2019-02-09T07:01:43Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="44453" started-at="2019-02-06T13:21:19Z" finished-at="2019-02-06T13:22:04Z">
-      <class name="logsfunctionalityscript.Logs_forgot_password">
-        <test-method status="PASS" signature="beforemethod(java.lang.String)[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@bd8db5a]" name="beforemethod" is-config="true" duration-ms="10761" started-at="2019-02-06T13:21:19Z" finished-at="2019-02-06T13:21:30Z">
+    <test name="Test1" duration-ms="65260" started-at="2019-02-09T06:59:38Z" finished-at="2019-02-09T07:00:43Z">
+      <class name="logsfunctionalityscript.Assign_ticket_to_team_script">
+        <test-method status="PASS" signature="beforemethod(java.lang.String)[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@bd8db5a]" name="beforemethod" is-config="true" duration-ms="10153" started-at="2019-02-09T06:59:38Z" finished-at="2019-02-09T06:59:48Z">
           <params>
             <param index="0">
               <value>
@@ -18,26 +18,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method status="PASS" signature="forgot_password()[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@bd8db5a]" name="forgot_password" duration-ms="28025" started-at="2019-02-06T13:21:30Z" finished-at="2019-02-06T13:21:58Z">
+        <test-method status="PASS" signature="assignTicket()[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@bd8db5a]" name="assignTicket" duration-ms="49609" started-at="2019-02-09T06:59:48Z" finished-at="2019-02-09T07:00:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgot_password -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@bd8db5a]" name="aftermethod" is-config="true" duration-ms="5638" started-at="2019-02-06T13:21:58Z" finished-at="2019-02-06T13:22:04Z">
+        </test-method> <!-- assignTicket -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@bd8db5a]" name="aftermethod" is-config="true" duration-ms="5482" started-at="2019-02-09T07:00:38Z" finished-at="2019-02-09T07:00:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=forgot_password status=SUCCESS method=Logs_forgot_password.forgot_password()[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@bd8db5a] output={null}]]]>
+                <![CDATA[[TestResult name=assignTicket status=SUCCESS method=Assign_ticket_to_team_script.assignTicket()[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@bd8db5a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
+      </class> <!-- logsfunctionalityscript.Assign_ticket_to_team_script -->
     </test> <!-- Test1 -->
-    <test name="Test2" duration-ms="37464" started-at="2019-02-06T13:22:04Z" finished-at="2019-02-06T13:22:41Z">
-      <class name="logsfunctionalityscript.Logs_forgot_password">
-        <test-method status="PASS" signature="beforemethod(java.lang.String)[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@6b9651f3]" name="beforemethod" is-config="true" duration-ms="7253" started-at="2019-02-06T13:22:04Z" finished-at="2019-02-06T13:22:11Z">
+    <test name="Test2" duration-ms="60141" started-at="2019-02-09T07:00:43Z" finished-at="2019-02-09T07:01:43Z">
+      <class name="logsfunctionalityscript.Assign_ticket_to_team_script">
+        <test-method status="PASS" signature="beforemethod(java.lang.String)[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@6b9651f3]" name="beforemethod" is-config="true" duration-ms="7819" started-at="2019-02-09T07:00:43Z" finished-at="2019-02-09T07:00:51Z">
           <params>
             <param index="0">
               <value>
@@ -48,22 +48,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method status="PASS" signature="forgot_password()[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@6b9651f3]" name="forgot_password" duration-ms="24529" started-at="2019-02-06T13:22:11Z" finished-at="2019-02-06T13:22:35Z">
+        <test-method status="PASS" signature="assignTicket()[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@6b9651f3]" name="assignTicket" duration-ms="46636" started-at="2019-02-09T07:00:51Z" finished-at="2019-02-09T07:01:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgot_password -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@6b9651f3]" name="aftermethod" is-config="true" duration-ms="5667" started-at="2019-02-06T13:22:35Z" finished-at="2019-02-06T13:22:41Z">
+        </test-method> <!-- assignTicket -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@6b9651f3]" name="aftermethod" is-config="true" duration-ms="5686" started-at="2019-02-09T07:01:38Z" finished-at="2019-02-09T07:01:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=forgot_password status=SUCCESS method=Logs_forgot_password.forgot_password()[pri:0, instance:logsfunctionalityscript.Logs_forgot_password@6b9651f3] output={null}]]]>
+                <![CDATA[[TestResult name=assignTicket status=SUCCESS method=Assign_ticket_to_team_script.assignTicket()[pri:0, instance:logsfunctionalityscript.Assign_ticket_to_team_script@6b9651f3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-      </class> <!-- logsfunctionalityscript.Logs_forgot_password -->
+      </class> <!-- logsfunctionalityscript.Assign_ticket_to_team_script -->
     </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -60,6 +60,15 @@ public class Logs_Assign_ticket_page extends Basepage
 		sele.selectByVisibleText("Agent Agent");
 	}
 	
+	//method for assigning the team
+	public void clickonassignteamdropdown() throws InterruptedException 
+	{
+		Thread.sleep(3000);
+		this.clickassigndropdown.click();
+		Select sele=new Select(clickassigndropdown);
+		sele.selectByVisibleText("Developer");
+	}
+	
 	//method for clicking on assignpopup
 	public void clickonassignpopup() throws InterruptedException
 	{

@@ -20,7 +20,7 @@ public class Logs_reply_as_agent_page extends Basepage
     private WebElement clickinbox;
 	
 	//click on ticket
-	@FindBy(xpath="//h3[@class='ticket-description-tip overdue_ticket break-word']")
+	@FindBy(xpath="/html/body/div[1]/div/section[2]/div/div[2]/div/div[2]/div[4]/table/tbody/tr[1]/td[3]/div/h3/div/a")
 	private WebElement clickticket;
 	
 	
@@ -45,8 +45,9 @@ public class Logs_reply_as_agent_page extends Basepage
 	}
 	
 	//method for clicking on ticket
-	public void clickonticket()
+	public void clickonticket() throws InterruptedException
 	{
+		Thread.sleep(3500);
 		this.clickticket.click();
 	}
 	
